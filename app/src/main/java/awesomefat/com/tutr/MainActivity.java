@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     public void askButton(View v)
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity
 
     public void answerButton(View v)
     {
-        Intent i = new Intent(this, answerAQuestion.class);
+        Intent i = new Intent(this, QuestionList.class);
         this.startActivity(i);
     }
     public void viewProfileButton (View v)

@@ -6,4 +6,63 @@
     android:layout_height="match_parent"
     tools:context="awesomefat.com.tutr.viewProfile">
 
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="501dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                app:srcCompat="@drawable/facebook_1491698935316" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:text="Captain Vladimir Crunch" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5 star rating" />
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="viewButtonPressed"
+                android:text="View my Questions" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answers Given" />
+
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="editProfileButtonPressed"
+                android:text="Edit Profile" />
+
+            <Button
+                android:id="@+id/mainMenuButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="mainMenuButtonPressed"
+                android:text="Back to Main Menu" />
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

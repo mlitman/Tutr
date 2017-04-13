@@ -17,7 +17,10 @@
         </activity>
         <activity android:name=".askAQuestion" />
         <activity android:name=".answerAQuestion" />
-        <activity android:name=".viewProfile"></activity>
+        <activity android:name=".viewProfile" />
+        <activity android:name=".QuestionList" />
+        <activity android:name=".MyQuestions" />
+        <activity android:name=".ReceivedAnswers"></activity>
     </application>
 
 </manifest>

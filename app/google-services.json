@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "621263536404",
+    "firebase_url": "https://tutr-d4afc.firebaseio.com",
+    "project_id": "tutr-d4afc",
+    "storage_bucket": "tutr-d4afc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621263536404:android:aa60c1e417186fef",
+        "android_client_info": {
+          "package_name": "awesomefat.com.tutr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621263536404-8q5lr23d30h7k50qtsviio8e79m1e7cl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awesomefat.com.tutr",
+            "certificate_hash": "965ff9775f96a2cdb889d346eb776a02c2f9aa1f"
+          }
+        },
+        {
+          "client_id": "621263536404-cag7ju9t8i5l0adgj732ureqakkr0f68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHt0Az1Z8Ez4oquRvNsXL7vfPmqm5-q0g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621263536404-cag7ju9t8i5l0adgj732ureqakkr0f68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
