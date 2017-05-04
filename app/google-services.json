@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "621263536404-fiu99c2bpv2u54ffflh38umthvmflmiu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awesomefat.com.tutr",
+            "certificate_hash": "cd1c0a939625ca2d6c2ea4633b9b108b2049953d"
+          }
+        },
+        {
           "client_id": "621263536404-8q5lr23d30h7k50qtsviio8e79m1e7cl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
