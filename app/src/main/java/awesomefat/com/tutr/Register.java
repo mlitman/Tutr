@@ -25,51 +25,69 @@ public class Register extends AppCompatActivity
     private FirebaseAuth mAuth;
     private EditText signUpemail;
     private EditText signUpPassword;
+    private EditText confirmPassword;
     private Button signUpButton;
     private Register registerActivity;
+    private EditText firstName;
+    private EditText lastName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        this.getSupportActionBar().setTitle("Register");
         super.onCreate(savedInstanceState);
         setContentView(activity_register);
         mAuth = FirebaseAuth.getInstance();
         this.signUpButton = (Button)this.findViewById(R.id.signUpButton);
-        this.signUpemail = (EditText)this.findViewById(R.id.emailET);
-        this.signUpPassword = (EditText)this.findViewById(R.id.passwordET);
+        this.signUpemail = (EditText)this.findViewById(R.id.emailRegisterET);
+        this.signUpPassword = (EditText)this.findViewById(R.id.passwordRegisterET);
+        this.confirmPassword = (EditText)this.findViewById(R.id.confirmPasswordRegisterET);
         this.registerActivity = this;
     }
 
     public void signUpButtonTapped(View v)
     {
-       if(signUpemail.getText().toString() == "" || signUpPassword.getText().toString() == "")
+
+       if(signUpemail.getText().toString().equals("") || signUpPassword.getText().toString().equals(""))
        {
-           System.out.println("Enter in email/password");
+           Toast.makeText(registerActivity, "Enter Information", Toast.LENGTH_SHORT).show();
        }
        else
        {
-           mAuth.createUserWithEmailAndPassword(signUpemail.getText().toString(), signUpPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
-           {
-               @Override
-               public void onComplete(@NonNull Task<AuthResult> task)
+               if(signUpPassword.getText().toString().equals(confirmPassword.getText().toString()))
                {
-                   if(task.isSuccessful())
+                   mAuth.createUserWithEmailAndPassword(signUpemail.getText().toString(), signUpPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
                    {
-                       //Log.d(TAG, "createUserWithEmail:success");
-                       Core.currentUser = mAuth.getCurrentUser();
-                       //updateUI(null);
-                       Intent i = new Intent(registerActivity, MainActivity.class);
-                       registerActivity.startActivity(i);
-                   }
-                   else
-                   {
-                       //Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                       Toast.makeText(registerActivity, "Sign Up Failed Make Sure All Fields are Filled.", Toast.LENGTH_SHORT).show();
-                      // updateUI(null);
+                       @Override
+                       public void onComplete(@NonNull Task<AuthResult> task)
+                       {
+                               if(task.isSuccessful())
+                               {
+                                   //Log.d(TAG, "createUserWithEmail:success");
+                                   Core.currentUser = mAuth.getCurrentUser();
+                                   //updateUI(null);
 
-                   }
+
+
+                               }
+                               else
+                               {
+                                   //Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                   Toast.makeText(registerActivity, "Sign Up Failed Make Sure All Fields are Filled.", Toast.LENGTH_SHORT).show();
+                                   // updateUI(null);
+
+                               }
+
+                       }
+                   });
+                   Intent i = new Intent(registerActivity, MainActivity.class);
+                   registerActivity.startActivity(i);
                }
-           });
+               else
+               {
+                   Toast.makeText(registerActivity, "Passwords don't match!", Toast.LENGTH_SHORT).show();
+               }
+
        }
 
 
