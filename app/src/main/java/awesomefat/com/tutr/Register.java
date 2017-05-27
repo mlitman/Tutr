@@ -51,8 +51,8 @@ public class Register extends AppCompatActivity
        if(signUpemail.getText().toString().equals("") || signUpPassword.getText().toString().equals(""))
        {
            Toast.makeText(registerActivity, "Enter Information", Toast.LENGTH_SHORT).show();
-           Intent i = new Intent(registerActivity, MainActivity.class);
-           registerActivity.startActivity(i);
+           /*Intent i = new Intent(registerActivity, MainActivity.class);
+           registerActivity.startActivity(i);*/
        }
        else
        {
