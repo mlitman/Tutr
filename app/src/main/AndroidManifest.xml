@@ -28,7 +28,8 @@
         <activity android:name=".ReceivedAnswers" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
-        <activity android:name=".SignIn"></activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".editProfile"></activity>
     </application>
 
 </manifest>
