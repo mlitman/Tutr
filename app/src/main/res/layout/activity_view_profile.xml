@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="374dp"
-        android:layout_height="501dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="2dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="374dp"
+    android:layout_height="501dp"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="2dp">
 
-        <LinearLayout
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/facebook_1491698935316" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:text="Captain Vladimir Crunch" />
+
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:text="5 star rating" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="184dp"
-                app:srcCompat="@drawable/facebook_1491698935316" />
+        <Button
+            android:id="@+id/viewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewButtonPressed"
+            android:text="View my Questions" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="186dp"
-                android:layout_height="wrap_content"
-                android:text="Captain Vladimir Crunch" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answers Given" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5 star rating" />
+        <Button
+            android:id="@+id/editProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="editProfileButtonPressed"
+            android:text="Edit Profile" />
 
-            <Button
-                android:id="@+id/viewButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="viewButtonPressed"
-                android:text="View my Questions" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Answers Given" />
-
-            <Button
-                android:id="@+id/editProfileButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="editProfileButtonPressed"
-                android:text="Edit Profile" />
-
-            <Button
-                android:id="@+id/mainMenuButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="mainMenuButtonPressed"
-                android:text="Back to Main Menu" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/mainMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="mainMenuButtonPressed"
+            android:text="Back to Main Menu" />
     </LinearLayout>
+</LinearLayout>

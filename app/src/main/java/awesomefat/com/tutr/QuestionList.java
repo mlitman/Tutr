@@ -57,7 +57,8 @@ public class QuestionList extends AppCompatActivity
                 {
                     for(DataSnapshot aQuestion: aClass.getChildren())
                     {
-                        //System.out.println("*******************" + aQuestion.getKey());
+                        System.out.println("*******************" + aQuestion.toString());
+                        System.out.println(aQuestion.child("title").getValue() + " " + aQuestion.child("question").getValue() + " " + aQuestion.child("course").getValue());
                         Question temp = new Question(aQuestion.child("title").getValue().toString(), aQuestion.child("question").getValue().toString(), aQuestion.child("course").getValue().toString());
                         temp.setKey(aQuestion.getKey().toString());
                         Core.theQuestions.add(temp);
@@ -72,6 +73,7 @@ public class QuestionList extends AppCompatActivity
             }
         };
         mDatabase.addValueEventListener(questionListener);
+
     }
     public void mainMenuButtonPressed (View v)
     {

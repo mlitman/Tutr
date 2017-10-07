@@ -33,7 +33,9 @@ public class SignIn extends AppCompatActivity
 
     public void signInButtonPressed (View v)
     {
-        if (signInEmail.getText().toString().equals("") || signInPassword.getText().toString().equals("")) {
+        Intent i = new Intent(signInActivity, MainActivity.class);
+        signInActivity.startActivity(i);
+       if (signInEmail.getText().toString().equals("") || signInPassword.getText().toString().equals("")) {
             Toast.makeText(signInActivity, "Enter Information", Toast.LENGTH_SHORT).show();
         }
         else
